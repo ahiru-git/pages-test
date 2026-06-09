@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fffcfc;
+    padding: 30px;
+    border-radius: 16px;
+
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p.description {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    padding: 0 20px;
+}
+
+.radio-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.radio-container label {
+    margin: 0 15px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #555;
+}
+
+.radio-container input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.slider-container {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.slider-box {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.545);
+}
+
+.slider-box label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #4a5568;
+    margin-bottom: 10px;
+}
+
+.slider-box span {
+    font-size: 20px;
+    color: #3182ce;
+    margin: 0 4px;
+}
+
+.slider-box input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* 地図の表示エリアの設定 */
+#chart {
+    width: 100%;
+    height: 1000px; 
+    margin: 0 auto;
+    background-color: #fdfdfd;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #e2e8f0; 
+}
+
+footer p {
+    font-size: 13px;       
+    color: #7f8c8d;        
+    margin: 0;
+}
+
+footer a {
+    color: #3182ce;        
+    text-decoration: none; 
+}
+
+footer a:hover {
+    text-decoration: underline; 
+}
