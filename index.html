@@ -3,38 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>日本国内の空き家分布可視化</title>
-    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
-    <link rel="stylesheet" href="home.css">
+    <meta name="format-detection" content="telephone=no">
+    <title>【プロトタイプ】日本全国 気候データ可視化システム</title>
+    <link rel="stylesheet" href="中間.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 </head>
 <body>
 
-    <header>
-        <h1>日本国内における現在の空き家分布</h1>
-        <div class="subtitle">都道府県別の空き家数・総住宅数データ</div>
-    </header>
+   <div class="container">
+        <h1>日本全国 県庁所在地気候データ解析 (2006年〜2025年)</h1>
+        <p class="description">
+            47都道府県の県庁所在地における月別の気象統計。年・月で表示する気温の種類（平均・最高・最低）を切り替えて日本地図上に表示する。
+        </p>
 
-    <main class="main-container">
+        <div class="radio-container">
+            <label><input type="radio" name="dataType" value="avg" checked> 月平均気温</label>
+            <label><input type="radio" name="dataType" value="max"> 月最高気温</label>
+            <label><input type="radio" name="dataType" value="min"> 月最低気温</label>
+        </div>
         
-        <div class="card map-box">
-            <div id="map-container"></div>
-        </div>
-
-        <div class="card chart-box">
-            <h2>選択された都道府県のデータ</h2>
-            <hr style="margin: 15px 0; border: 0; border-top: 1px solid #e2e8f0;">
-            
-           <div class="stat-values">
-                <p><strong>都道府県名:</strong> <span id="stat-prefecture">--</span></p>
-                <p><strong>総住宅数:</strong> <span id="stat-total">--</span> 戸</p>
-                <p><strong>空き家数:</strong> <span id="stat-vacant">--</span> 戸</p>
+        <div class="slider-container">
+            <div class="slider-box">
+                <label for="yearSlider">表示する年: <span id="yearDisplay">2025</span>年</label>
+                <input type="range" id="yearSlider" min="2006" max="2025" >
             </div>
-
             
+            <div class="slider-box">
+                <label for="monthSlider">表示する月: <span id="monthDisplay">1</span>月</label>
+                <input type="range" id="monthSlider" min="1" max="12" >
+            </div>
         </div>
 
-    </main>
+        <div id="chart"></div>
+   </div>
+   
+   <footer>
+       <p>使用データ：国土交通省 国土数値情報（<a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2026.html" target="_blank" rel="noopener noreferrer">行政区域データ 全国 令和7年/2025年</a>）
+    可視化ライブラリ：<a href="https://echarts.apache.org/" target="_blank" rel="noopener noreferrer">Apache ECharts</a>
+       </p>
+   </footer>
 
-    <script src="home.js"></script>
+    <script src="中間.js"></script>
 </body>
 </html>
